@@ -10,7 +10,7 @@
 
 @media screen and (min-width: 768px) {
 .wy-nav-side{
-    width: 200px;
+    width: 224px;
 }
 .wy-nav-content-wrap{
     margin-left: 200px;
@@ -68,6 +68,8 @@ pre > span{
     -webkit-box-shadow: 0 0 10px 8px rgba(2, 2, 2, 0.36);
     -moz-box-shadow: 0 0 10px 8px rgba(2, 2, 2, 0.36);
     box-shadow: 0 0 10px 8px rgba(2, 2, 2, 0.36);
+    position: relative;
+    z-index: 210;
 }
 
 .entry-content{
@@ -147,7 +149,7 @@ pre > span{
 }
 
 .rst-content{
-    z-index: 10;
+    z-index: 210;
     margin-top: -60px;
 }
 
@@ -269,7 +271,7 @@ wy-menu-vertical li.toctree-l2.current>a {
     }
 
     .rst-content{
-	z-index: 10;
+	z-index: 210;
 	margin-top: -20px;
     }
 
