@@ -5,7 +5,9 @@ jQuery.each(async_kw, function(i, kw){
 
   jQuery.each(elements, function(j, el){
     el = jQuery(el);
-    el.removeClass('n');
-    el.addClass('kn');
+    if (el.text() == kw){
+      el.removeClass('n');
+      el.addClass('kn');
+    };
   });
 });

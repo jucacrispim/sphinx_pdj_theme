@@ -232,12 +232,12 @@ wy-menu-vertical li.toctree-l2.current>a {
 }
 
 
-.highlight .k,
-.highlight .nb{
+.highlight .k{
     color: #47ffff !important;
 }
 
-.highlight .nf{
+.highlight .nf,
+.highlight .nb{
     color: #210cb9;
 }
 
