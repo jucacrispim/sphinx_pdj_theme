@@ -17,7 +17,7 @@ def get_version_from_file():
 def get_long_description_from_file():
     # content of README will be the long description
 
-    fname = 'README'
+    fname = 'README.rst'
     with open(fname) as f:
         fcontent = f.read()
     return fcontent
@@ -35,21 +35,13 @@ LONG_DESCRIPTION = get_long_description_from_file()
 setup(
     name='sphinx_pdj_theme',
     version=VERSION,
-    url='https://github.com/rtfd/sphinx_pdj_theme/',
+    url='https://github.com/jucacrispim/sphinx_pdj_theme',
     license='MIT',
     author='Juca Crispim',
     author_email='juca@poraodojuca.net',
     description='PdJ for Sphinx',
-    long_description=open('README.rst', encoding='utf-8').read(),
-    zip_safe=False,
+    long_description=LONG_DESCRIPTION,
     packages=['sphinx_pdj_theme'],
-    package_data={'sphinx_pdj_theme': [
-        'theme.conf',
-        '*.html',
-        'static/css/*.css',
-        'static/js/*.js',
-        'static/font/*.*'
-    ]},
     include_package_data=True,
     entry_points={
         'sphinx.html_themes': [
