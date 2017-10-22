@@ -191,18 +191,31 @@ h2 a:hover{
     background: #4e4a4a;
 }
 
+wy-menu-vertical li.toctree-l2.current>a {
+    color: #343131 !important;
+}
+
+.wy-menu-vertical li.toctree-l2.current>a {
+    background: #343131;
+    padding: 0.4045em 2.427em;
+    box-shadow: none;
+}
+
 .highlight{
     background: #000 !important;
 }
 
-.highlight pre{
+.highlight pre,
+.highlight .mi,
+.highlight .go{
     color: #57de4e !important;
     font-size: 0.9em !important;
 }
 
 .highlight .n, .highlight .nn,
 .highlight .p, .highlight .o,
-.highlight .n{
+.highlight .nv,
+.highlight .gp{
     color: #57de4e;
 }
 
@@ -210,11 +223,27 @@ h2 a:hover{
     color: #47ffff !important;
 }
 
-.highlight .s{
+.highlight .nc,
+.highlight .nd{
+    color: #1c909e;
+    font-weight: normal;
+}
+
+
+.highlight .k,
+.highlight .nb{
+    color: #47ffff !important;
+}
+
+.highlight .nf{
+    color: #210cb9;
+}
+
+.highlight .s1, .highlight .s2{
     color: #FDF5E6;
 }
 
-.highlight .c{
+.highlight .c1{
     color: #d80e04;
 }
 
