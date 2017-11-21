@@ -232,7 +232,7 @@ wy-menu-vertical li.toctree-l2.current>a {
 }
 
 
-.highlight .k{
+.highlight .k, .highlight .bp{
     color: #47ffff !important;
 }
 
@@ -241,11 +241,12 @@ wy-menu-vertical li.toctree-l2.current>a {
     color: #210cb9;
 }
 
-.highlight .s1, .highlight .s2{
+.highlight .s1, .highlight .s2, .highlight .s{
     color: #FDF5E6;
 }
 
-.highlight .c1{
+.highlight .c1,
+.highlight .c{
     color: #d80e04;
 }
 
