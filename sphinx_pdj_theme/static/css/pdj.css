@@ -241,7 +241,8 @@ wy-menu-vertical li.toctree-l2.current>a {
     color: #210cb9;
 }
 
-.highlight .s1, .highlight .s2, .highlight .s{
+.highlight .s1, .highlight .s2, .highlight .s,
+.highlight .sd{
     color: #FDF5E6;
 }
 
