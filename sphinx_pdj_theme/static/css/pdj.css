@@ -214,6 +214,10 @@ wy-menu-vertical li.toctree-l2.current>a {
     font-size: 0.9em !important;
 }
 
+.highlight .nt{
+    color: #8080ec;
+}
+
 .highlight .n, .highlight .nn,
 .highlight .p, .highlight .o,
 .highlight .nv,
