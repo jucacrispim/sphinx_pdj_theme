@@ -389,4 +389,8 @@ a:visited{
 
 .wy-side-nav-search>a, .wy-side-nav-search .wy-dropdown>a {
   color: #fcfcfc;
- }
+}
+
+.highlight-yaml .nt{
+    color: #eac648;
+}
