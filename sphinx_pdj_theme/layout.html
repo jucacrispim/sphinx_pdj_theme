@@ -40,6 +40,9 @@
     <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
   {% endfor %}
 
+  {% if theme_style == "darker" %}
+    <link rel="stylesheet" href="{{ pathto('_static/css/darker.css', 1) }}" type="text/css" />
+  {% endif %}
 
   {%- block linktags %}
     {%- if hasdoc('about') %}
