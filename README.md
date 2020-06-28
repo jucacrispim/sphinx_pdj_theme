@@ -36,5 +36,5 @@ html_theme_options = {
 
 Screenshots
 -----------
-![defaulf](https://raw.githubusercontent.com/jucacrispim/sphinx_pdj_theme/default.jpg)
-![darker](https://raw.githubusercontent.com/jucacrispim/sphinx_pdj_theme/darker.jpg)
+![defaulf](https://raw.githubusercontent.com/jucacrispim/sphinx_pdj_theme/master/default.jpg)
+![darker](https://raw.githubusercontent.com/jucacrispim/sphinx_pdj_theme/master/darker.jpg)
