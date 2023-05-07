@@ -13,6 +13,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="">
 
   {% block htmltitle %}
   <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
@@ -28,10 +29,8 @@
 
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'/>
 
-  {%- if not READTHEDOCS %}
-    <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
-  {%- endif %}
 
+  <link rel="stylesheet" href="{{ pathto('_static/css/img.css', 1) }}" type="text/css"/>
   {% for cssfile in css_files %}
     <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
   {% endfor %}
@@ -40,9 +39,7 @@
     <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
   {% endfor %}
 
-  {% if theme_style == "darker" %}
-    <link rel="stylesheet" href="{{ pathto('_static/css/darker.css', 1) }}" type="text/css" />
-  {% endif %}
+  <link rel="stylesheet" href="{{ pathto('_static/css/darker.css', 1) }}" type="text/css" media="(prefers-color-scheme: dark)"/>
 
   {%- block linktags %}
     {%- if hasdoc('about') %}
@@ -85,7 +82,7 @@
     {%- block script %}
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
-
+    <script type="module" src="https://googlechromelabs.github.io/dark-mode-toggle/src/dark-mode-toggle.mjs"></script>
     {%- endblock %}
 
   </head>
@@ -154,10 +151,14 @@
 	    <!-- </ul> -->
 	    <!-- <hr/> -->
 	  </div>
-
           <div role="main" class="{%- if flatpage %} flatpage {%- endif %}">
 
 	    <div id="content" class="hfeed entry-container hentry">
+      	<div id="dark-mode-toggle-container">
+	  <dark-mode-toggle appearance="toggle" dark="switch to light mode" light="switch to dark mode" permanent="true">
+	  </dark-mode-toggle>
+	</div>
+
               {%- block body %}
 	      {%- endblock %}
 	    </div>
