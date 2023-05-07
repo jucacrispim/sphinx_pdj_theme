@@ -15,7 +15,7 @@ description = "A cool theme for sphinx documentation"
 readme = "README.md"
 classifiers = [
     "Programming Language :: Python :: 3",
-    'License :: OSI Approved :: MIT',
+    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     'Topic :: Software Development :: Libraries :: Python Modules',
 ]
