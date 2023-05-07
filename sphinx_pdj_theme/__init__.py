@@ -1,7 +1,5 @@
 import os
 
-VERSION = '0.2.1'
-
 
 def get_html_theme_path():
     """Return list of HTML theme paths."""
