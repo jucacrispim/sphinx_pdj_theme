@@ -1,0 +1,27 @@
+[build-system]
+requires = [
+    "setuptools >= 65",
+    "wheel >= 0.38",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sphinx-pdj-theme"
+version = "0.3.0"
+authors = [
+  { name="Juca Crispim" },
+]
+description = "A cool theme for sphinx documentation"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    'License :: OSI Approved :: MIT',
+    "Operating System :: OS Independent",
+    'Topic :: Software Development :: Libraries :: Python Modules',
+]
+
+[project.entry-points]
+"sphinx.html_themes" = { sphinx_pdj_theme = "sphinx_pdj_theme" }
+
+[project.urls]
+"Homepage" = "https://github.com/jucacrispim/sphinx_pdj_theme/"
