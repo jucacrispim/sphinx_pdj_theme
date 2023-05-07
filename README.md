@@ -1,8 +1,8 @@
 PdJ Sphinx Theme
 ================
 
-This theme is a dark theme for sphinx documentation based on the
-read the docs theme.
+This theme is a theme for sphinx documentation based on the
+read the docs theme. It supports light and dark modes.
 
 To install it, use pip:
 
@@ -17,21 +17,6 @@ your conf.py file.
 import sphinx_pdj_theme
 html_theme = 'sphinx_pdj_theme'
 htm_theme_path = [sphinx_pdj_theme.get_html_theme_path()]
-```
-
-You can also have a darker appearence by setting the following in your conf.py
-file.
-
-```python
-import sphinx_pdj_theme
-html_theme = 'sphinx_pdj_theme'
-htm_theme_path = [sphinx_pdj_theme.get_html_theme_path()]
-
-# sets the darker appearence
-html_theme_options = {
-    'style': 'darker'
-}
-
 ```
 
 Screenshots
