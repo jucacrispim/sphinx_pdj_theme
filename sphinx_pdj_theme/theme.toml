@@ -1,0 +1,16 @@
+[theme]
+inherit = "basic"
+stylesheets = [
+    "css/img.css",
+    "css/pdj.css",
+]
+
+[options]
+typekit_id = "hiw1hhg"
+analytics_id = ''
+sticky_navigation = false
+style = "default"
+logo_width = ''
+logo_height = ''
+search = 'show'
+home_link = 'show'
