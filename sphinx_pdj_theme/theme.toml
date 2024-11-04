@@ -3,6 +3,7 @@ inherit = "basic"
 stylesheets = [
     "css/img.css",
     "css/pdj.css",
+    "css/darker.css",
 ]
 
 [options]

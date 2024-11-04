@@ -1,12 +1,9 @@
 {# TEMPLATE VAR SETTINGS #}
-{%- set url_root = pathto('', 1) %}
-{%- if url_root == '#' %}{% set url_root = '' %}{% endif %}
 {%- if not embedded and docstitle %}
   {%- set titlesuffix = " &mdash; "|safe + docstitle|e %}
 {%- else %}
   {%- set titlesuffix = "" %}
 {%- endif %}
-
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xml:lang="{{ LANGUAGE_CODE }}" lang="{{ LANGUAGE_CODE }}" version="-//W3C//DTD XHTML 1.1//EN" xmlns="http://www.w3.org/1999/xhtml">
@@ -20,27 +17,23 @@
   <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
   {% endblock %}
 
-  {# OPENSEARCH #}
-  {%- if not embedded %}
-    {%- if use_opensearch %}
-      <link rel="search" type="application/opensearchdescription+xml" title="{% trans docstitle=docstitle|e %}Search within {{ docstitle }}{% endtrans %}" href="{{ pathto('_static/opensearch.xml', 1) }}"/>
-    {% endif %}
-
-  {% endif %}
 
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'/>
 
 
-  <link rel="stylesheet" href="{{ pathto('_static/css/img.css', 1) }}" type="text/css"/>
   {% for cssfile in css_files %}
-    <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
+  {% if cssfile.filename.endswith('darker.css') %}
+  <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css"
+	media="(prefers-color-scheme: dark)"/>
+  {% else %}
+  <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
+  {% endif %}
   {% endfor %}
 
   {% for cssfile in extra_css_files %}
     <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
   {% endfor %}
 
-  <link rel="stylesheet" href="{{ pathto('_static/css/darker.css', 1) }}" type="text/css" media="(prefers-color-scheme: dark)"/>
 
   {%- block linktags %}
     {%- if hasdoc('about') %}
@@ -185,15 +178,6 @@
 	</div>
 	  {% if not embedded %}
 
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'{{ url_root }}',
-            VERSION:'{{ release|e }}',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'{{ '' if no_search_suffix else file_suffix }}',
-            HAS_SOURCE:  {{ has_source|lower }}
-        };
-    </script>
     {%- for scriptfile in script_files %}
     <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}">
 
@@ -202,20 +186,7 @@
 
   {% endif %}
 
-   <script type="text/javascript"
-           src="{{ pathto('_static/js/theme.js', 1) }}"></script>
 
-   <script type="text/javascript"
-           src="{{ pathto('_static/js/pdj.js', 1) }}"></script>
-
-  {# STICKY NAVIGATION #}
-  {% if theme_sticky_navigation %}
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
-      });
-  </script>
-  {% endif %}
 
   {%- block footer %} {% endblock %}
 
