@@ -1,9 +1,9 @@
 [theme]
 inherit = "basic"
 stylesheets = [
-    "css/img.css",
+#    "css/img.css",
     "css/pdj.css",
-    "css/darker.css",
+#    "css/darker.css",
 ]
 
 [options]
