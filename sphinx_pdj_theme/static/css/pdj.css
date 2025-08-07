@@ -1,5 +1,10 @@
 @import url("theme.css");
 
+#barra-mobile a {
+    color: #fcfcfc;
+}
+
+
 .wy-body-for-nav{
     background:left repeat-y  #343131;
     background-size:300px 1px;
@@ -24,6 +29,65 @@
     }
 }
 
+@media screen and (max-width: 768px) {
+
+    /* ===== ANIMAÇÃO DO MENU MOBILE ===== */
+    .wy-nav-side {
+      box-shadow: none;
+      z-index: 1000;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 300px;
+      transform: translateX(-100%);
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: none;
+    }
+
+    .wy-nav-content-wrap {
+     transition: none !important;
+      transform: none !important;
+    }
+
+    /* Menu aberto */
+    .wy-nav-content-wrap.shift {
+	position:inherit;
+      transform: translateX(300px);
+    }
+
+    .wy-nav-side.shift {
+      transform: translateX(0);
+      box-shadow: 5px 0 25px rgba(0, 0, 0, 0.15), 10px 0 40px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Overlay mais sutil */
+    .menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.25); /* Opacidade reduzida */
+      z-index: 999;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease;
+      backdrop-filter: blur(2px); /* Efeito de desfoque sutil */
+    }
+
+    .menu-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Estilo do menu flutuante */
+    .wy-nav-side {
+      backdrop-filter: blur(5px); /* Efeito de vidro fosco */
+    }
+
+
+}
 .wy-nav-top{
     background-color: #595C5E;
 }
@@ -707,4 +771,68 @@ body,
   background-color: #f8d7da;
   color: #721c24;
   border: 1px solid #f5c6cb;
+}
+
+/* aphotoblog stuff */
+.aphotoblog-photo-collection-content .fundo-claro {
+    height: 95px;c
+}
+
+.aphotoblog-photo-container img {
+  margin-top: 8px;
+  margin-left: 5px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 10px 5px rgba(2, 2, 2, 0.36);
+  -moz-box-shadow: 0 0 10px 5px rgba(2, 2, 2, 0.36);
+  box-shadow: 0 0 10px 5px rgba(2, 2, 2, 0.36);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 32.5vh;
+
+}
+
+.aphotoblog-photo-container img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px 10px rgba(2, 2, 2, 0.36);
+}
+
+
+.aphotoblog-photo-collection-content .entry-container {
+    background :none;
+    box-shadow: none;
+}
+
+.aphotoblog-photo-collection-content .hentry {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.aphotoblog-photo-container {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.aphotoblog-photo-collection-content #dark-mode-toggle-container {
+  display: block;
+  z-index: 10;
+  position: absolute;
+  top: -33px;;
+  right: 0;
+}
+
+@media screen and (max-width: 768px) {
+   .aphotoblog-photo-collection-content #dark-mode-toggle-container {
+     top: -53px;;
+   }
+
+}
+
+.aphotoblog-photo-item-container img {
+    max-height: 80vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
 }
