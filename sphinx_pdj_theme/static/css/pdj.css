@@ -37,6 +37,9 @@
     margin-left: -3%;
 }
 
+.rst-footer-buttons {
+    margin-top: 10px;
+}
 pre{
     font-size: 0.9em;
     padding: 1%;
