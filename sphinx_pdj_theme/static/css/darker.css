@@ -102,12 +102,6 @@ codeblock, pre.literal-block, .rst-content .literal-block, .rst-content pre.lite
 }
 
 
-.wy-nav-side {
-  background: rgba(30, 30, 30, 0.95); /* Fundo escuro levemente transparente */
-  box-shadow: 5px 0 25px rgba(0, 0, 0, 0.3), 10px 0 40px rgba(0, 0, 0, 0.2);
-}
-
-
 
 /* parlante comments */
 #parlante-comments,
