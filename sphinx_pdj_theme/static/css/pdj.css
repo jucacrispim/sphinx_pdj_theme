@@ -912,9 +912,33 @@ body,
   }
 }
 
-/* Em telas muito pequenas: reduz tamanho da fonte */
-@media (max-width: 768px) {
-  .aphotoblog-photo-item-container section h1 {
-    font-size: 2.2rem;
+/* CLASSE ESPECÍFICA PARA IMAGENS VERTICAIS */
+.aphotoblog-photo-item-container.img-vertical section img {
+  max-width: 80%; /* Reduz a largura para manter proporção */
+  max-height: 80vh; /* Aumenta altura máxima */
+  object-fit: contain;
+  align-self: flex-start; /* Mantém alinhamento no topo */
+}
+
+/* Ajuste do título para imagens verticais */
+.aphotoblog-photo-item-container.img-vertical section img + h1 {
+  flex: 1 0 30%; /* Aumenta espaço mínimo para o título */
+  padding-top: 5vh; /* Alinha verticalmente com a imagem */
+}
+
+/* Responsividade para imagens verticais */
+@media (max-width: 1100px) {
+  .aphotoblog-photo-item-container.img-vertical section img {
+    max-width: 100%;
+    max-height: 70vh;
   }
+
+  .aphotoblog-photo-item-container.img-vertical section img + h1 {
+    padding-top: 0;
+    margin-top: 20px;
+  }
+}
+
+.aphotoblog-photo-item-container.img-vertical section img {
+    box-shadow: none;
 }
