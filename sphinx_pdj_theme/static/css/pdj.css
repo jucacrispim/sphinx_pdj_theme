@@ -836,3 +836,85 @@ body,
     margin-right: auto;
 
 }
+
+
+/* Container principal */
+.aphotoblog-photo-item-container section {
+  display: flex;
+  flex-direction: row; /* Direção horizontal */
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 0;
+  margin-top: 0;
+}
+
+/* Imagem - ocupa 80% */
+.aphotoblog-photo-item-container section img {
+  flex: 0 0 80%; /* Ocupa exatamente 80% */
+  max-width: 80%;
+  height: auto;
+  max-height: 80vh;
+  margin-top: -2%;
+  border-radius: 3px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  order: 1; /* Imagem vem primeiro (esquerda) */
+}
+
+/* Título - ocupa o restante (20%) */
+.aphotoblog-photo-item-container section h1 {
+  flex: 1; /* Ocupa o espaço restante (20%) */
+  min-width: 200px;
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+  text-align: left;
+  align-self: flex-start; /* Alinha no topo */
+  position: relative;
+  padding-left: 20px;
+  order: 2; /* Título vem depois (direita) */
+}
+
+/* Linha decorativa ao lado do título */
+.aphotoblog-photo-item-container section h1::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  bottom: 5px;
+  width: 4px;
+  background: #e74c3c;
+  border-radius: 2px;
+}
+
+/* Em telas menores: ajusta o layout */
+@media (max-width: 1100px) {
+  .aphotoblog-photo-item-container section {
+    flex-direction: column; /* Empilha verticalmente */
+  }
+
+  .aphotoblog-photo-item-container section img {
+    flex: 0 0 auto;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .aphotoblog-photo-item-container section h1 {
+    flex: 0 0 auto;
+    width: 100%;
+    text-align: center;
+    padding-left: 0;
+    margin-top: 20px;
+  }
+
+  .aphotoblog-photo-item-container section h1::before {
+    display: none;
+  }
+}
+
+/* Em telas muito pequenas: reduz tamanho da fonte */
+@media (max-width: 768px) {
+  .aphotoblog-photo-item-container section h1 {
+    font-size: 2.2rem;
+  }
+}
