@@ -60,7 +60,7 @@
       <div role="navigation" aria-label="breadcrumbs navigation">
 	{%- block breadcrumbs %}{%- endblock %}
       </div>
-      <div role="main" class="">
+      <div class="">
 
 	{% block entry %}
 	<div id="content" class="hfeed entry-container hentry">
@@ -68,8 +68,10 @@
 	    <dark-mode-toggle appearance="toggle" class="slider" dark="" light="">
 	    </dark-mode-toggle>
 	  </div>
+	  <div role="main">
           {%- block body %}
 	  {%- endblock %}
+	  </div>
 	</div>
       </div>
       {% endblock entry %}

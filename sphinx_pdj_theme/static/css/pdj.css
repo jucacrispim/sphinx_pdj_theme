@@ -238,7 +238,8 @@ h2 a:hover{
     color: #404040;
 }
 
-.wy-menu-vertical li.on a, .wy-menu-vertical li.current>a {
+.wy-menu-vertical li.on a, .wy-menu-vertical li.current>a,
+#home_link.current{
     color: #b3b3b3;
     background: #4e4a4a;
     box-shadow: 0 0 5px 5px rgba(20, 20, 20, 0.30);
@@ -272,6 +273,15 @@ h2 a:hover{
 
 }
 
+.wy-menu-vertical a:active {
+  background-color: #6E7173;
+  cursor: pointer;
+  color: #fff;
+}
+
+.wy-menu-vertical {
+    margin-top: 15px;
+}
 .wy-menu-vertical li.current a:hover {
     background: #4e4a4a;
 }

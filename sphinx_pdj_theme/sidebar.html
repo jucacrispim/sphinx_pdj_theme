@@ -24,9 +24,9 @@
   </div>
 
   <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-    {% if theme_home_link != 'hide' %}
-    {% if theme_home_link_label != '' %}
-    <a href="{{ pathto(master_doc) }}" class=""> {{ theme_home_link_label }} </a>
+    {% if theme_home_menu_item != 'hide' %}
+    {% if theme_home_menu_item_label != '' %}
+    <a href="{{ pathto(master_doc) }}" id="home_link" class="{% if pagename == master_doc %}current{%endif%}"> {{ theme_home_menu_item_label }} </a>
     {% else %}
     <a href="{{ pathto(master_doc) }}" class=""> {{ project }} </a>
     {% endif %}
