@@ -63,6 +63,25 @@ html_theme_options = {
 }
 ```
 
+To include a navigation to the homepage in the sidebar, set the `home_menu_item` option
+to `show`
+
+```python
+html_theme_options = {
+	'home_menu_item': 'show'
+}
+```
+
+By default the label of the navigation item will be the project name. To change it
+set the `home_menu_item_label` option:
+
+```python
+html_theme_options = {
+	'home_menu_item': 'show',
+	'home_menu_item_label': 'Home',
+}
+
+
 
 
 Screenshots
