@@ -1,6 +1,6 @@
 <nav data-toggle="wy-nav-shift" class="wy-nav-side">
   <div class="wy-side-nav-search {%- if flatpage %} wy-side-nav-search-flat {%- endif %}">
-    {% if theme_home_link != 'hide' %}
+    {% if home_link != 'hide' %}
     <a href="{{ pathto(master_doc) }}" class="fa fa-home"> {{ project }} </a>
     {% endif %}
     {% if logo_url %}
@@ -17,13 +17,21 @@
     </div>
     {% endif %}
     <div role="search">
-      {% if theme_search != "hide" %}
+      {% if search != "hide" %}
 	{%- include "searchbox.html" %}
       {% endif %}
     </div>
   </div>
 
   <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+    {% if theme_home_link != 'hide' %}
+    {% if theme_home_link_label != '' %}
+    <a href="{{ pathto(master_doc) }}" class=""> {{ theme_home_link_label }} </a>
+    {% else %}
+    <a href="{{ pathto(master_doc) }}" class=""> {{ project }} </a>
+    {% endif %}
+    {% endif %}
+
     {% block menu %}
       {% set toctree = toctree(maxdepth=2, collapse=False, includehidden=True) %}
       {% if toctree %}
@@ -32,7 +40,11 @@
 	  <div class="local-toc">{{ toc }}</div>
       {% endif %}
     {% endblock %}
+  {% for sb in sidebars %}
+  {% include sb %}
+  {% endfor %}
 
   </div>
+
   &nbsp;
 </nav>

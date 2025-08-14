@@ -7,7 +7,6 @@ stylesheets = [
 ]
 
 [options]
-typekit_id = "hiw1hhg"
 analytics_id = ''
 sticky_navigation = false
 style = "default"
@@ -15,3 +14,4 @@ logo_width = ''
 logo_height = ''
 search = 'show'
 home_link = 'show'
+home_link_label = ''

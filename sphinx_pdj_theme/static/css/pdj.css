@@ -19,6 +19,10 @@
     border-color: #595C5E;
 }
 
+h1 a, h1 a:hover, h1 a:visited {
+    color: #000;
+}
+
 @media screen and (min-width: 768px) {
     .wy-nav-side{
 	width: 224px;
@@ -941,4 +945,29 @@ body,
 
 .aphotoblog-photo-item-container.img-vertical section img {
     box-shadow: none;
+}
+
+.aphotoblog-photo-navy {
+    margin-top: 10px;
+}
+
+.aphotoblog-last-photos img {
+  margin-top: 8px;
+  margin-left: 5px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 10px 5px rgba(2, 2, 2, 0.36);
+  -moz-box-shadow: 0 0 10px 5px rgba(2, 2, 2, 0.36);
+  box-shadow: 0 0 10px 5px rgba(2, 2, 2, 0.36);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 30.5vh;
+
+}
+
+.aphotoblog-last-photos img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px 10px rgba(2, 2, 2, 0.36);
+}
+
+.aphotoblog-photo-navy {
+    height: 20px;
 }
