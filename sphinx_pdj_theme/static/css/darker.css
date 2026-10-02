@@ -45,6 +45,21 @@ code, .rst-content tt {
     border: 0;
 }
 
+.rst-content table.docutils,
+.rst-content table.docutils th,
+.rst-content table.docutils td {
+    border-color: #3a3d3e;
+}
+
+.rst-content table.docutils thead th {
+    border-bottom-color: #4a4e4f;
+}
+
+.rst-content table.docutils:not(.field-list) tr:nth-child(2n-1) td {
+    background-color: rgba(255, 255, 255, 0.035);
+    color: rgb(209, 206, 199);
+}
+
 codeblock, pre.literal-block, .rst-content .literal-block, .rst-content pre.literal-block, div[class^="highlight"] {
     border: 1px solid #000;
  }
