@@ -3,7 +3,7 @@ builders:
 
   - name: Release
     branches:
-      - release
+      - master
 
     platform: python3.13
 
