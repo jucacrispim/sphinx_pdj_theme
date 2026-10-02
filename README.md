@@ -10,7 +10,7 @@ to change the mode. If changed the decision will be remembered.
 To install it, use pip:
 
 ```
-$ pip install sphinx_pdj_theme
+$ pip install sphinx_pdj_theme --extra-index-url=https://pypi.poraodojuca.dev
 ```
 
 To enable it in your project documentation, set the following in

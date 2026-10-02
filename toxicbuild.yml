@@ -1,0 +1,28 @@
+
+builders:
+
+  - name: Release
+    branches:
+      - release
+
+    platform: python3.13
+
+    envvars:
+      ENV: ci
+
+    plugins:
+      - name: apt-install
+        packages:
+          - build-essential
+          - curl
+
+      - name: python-venv
+        pyversion: python3.13
+
+    steps:
+      - name: Build package
+        command: ./build-scripts/create_package.sh
+        stop_on_fail: true
+
+      - name: Upload to pdj pypi
+        command: ./build-scripts/upload_to_pdj.sh
