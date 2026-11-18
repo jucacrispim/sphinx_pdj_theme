@@ -591,6 +591,40 @@ footer {
     color: #4070a0;
 }
 
+.highlight-c .highlight pre,
+.highlight-c .highlight :is(.n, .nf, .nb, .p, .o, .m, .mi, .mh, .mo, .mf) {
+    color: #00ff00 !important;
+}
+
+.highlight-c .highlight :is(.c, .c1, .cm, .cs) {
+    color: #ff3333;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.highlight-c .highlight .cp {
+    color: #8ab4d8;
+    font-weight: normal;
+}
+
+.highlight-c .highlight .cpf {
+    color: #ddd6c8;
+}
+
+.highlight-c .highlight .no {
+    color: #eac648;
+}
+
+.highlight-c .highlight :is(.k, .kd, .kr) {
+    color: #00ffff !important;
+    font-weight: bold;
+}
+
+.highlight-c .highlight :is(.kt, .nc, .nd) {
+    color: #00a3a3;
+    font-weight: normal;
+}
+
 .wy-side-nav-search img {
   display: block;
   margin: auto auto 0.809em auto;
